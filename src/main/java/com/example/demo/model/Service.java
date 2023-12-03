@@ -1,0 +1,28 @@
+package com.example.demo.model;
+
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name="Services")
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
+public class Service {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO )
+    private Long id;
+    @Column
+    private String name;
+    @Column
+    private String desc;
+    @Column
+    private String price;
+    @Column
+    private String img;
+
+
+}
